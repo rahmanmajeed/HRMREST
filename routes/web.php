@@ -14,3 +14,8 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+### Authentication API Part
+$router->group(['prefix'=>'api'],function() use ($router){
+       $router->get('index',['as'=>'test','uses'=>'AUTH\AuthController@index']);
+});

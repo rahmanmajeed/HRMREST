@@ -5,11 +5,21 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use App\Console\Commands\RouteListCommand;
 
-class AppServiceProvider extends ServiceProvider
+class RouteListServiceProvider extends ServiceProvider
 {
     protected $commands = [
         RouteListCommand::class,
     ];
+    /**
+     * Bootstrap the application services.
+     *
+     * @return void
+     */
+    public function boot()
+    {
+        //
+    }
+
     /**
      * Register any application services.
      *
